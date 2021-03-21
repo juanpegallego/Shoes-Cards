@@ -1,0 +1,35 @@
+@media only screen and (max-width: 600px) {
+    .container{
+        height: 40em;
+        top:0em;
+    }
+    
+    .container h2{
+        position: relative;
+        top: -40px;
+        padding-top: 30px;
+        letter-spacing: .1px;
+        font-size: 1.2rem;
+        color: red;
+        font-weight: lighter;
+        color: white;            
+    }
+    .img-container{
+        width: 6rem;
+        height: 6rem;
+    }
+    .container img{
+        width:9rem;
+        height: auto; 
+    }
+    .container p{
+        font-size: 1.2rem;
+        letter-spacing: -1px;
+    }
+    .container a{
+        font-size: 1.2rem;
+        width: 6rem;
+        letter-spacing: -2px;
+        
+    }
+  }

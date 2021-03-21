@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Harlem Shoes</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@1,500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="mediaqueries.css">
+    <link rel="stylesheet" href="navstyles.css">
+
+    
+    <style>
+        body{
+            min-height: 100vh;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: black;            
+            font-size: 10px;
+            font-family: Poppins;
+        }
+
+        .container{    
+            z-index: 1;      
+            margin: 50px; 
+            /* border: 3px solid  rgb(158, 179, 243); */ 
+            box-shadow: 0px 0px 30px 1px rgb(61, 61, 156);
+            background-color: rgb(36, 35, 35);            
+            position: relative; 
+            top: 10vh;
+            width: 20%;
+            margin: 200px 20px;
+            height: 51em;
+            max-width: 30%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 40px 50px 60px 40px;
+            border-radius: 10px;
+            text-align: center;      
+            color: white;        
+            overflow: hidden;              
+        }
+        .container::before{            
+            position: absolute;
+            top: 30em;
+            left: -10em;
+            box-shadow: 5px -5px 30px 5px red;
+            width: 120%;
+            height: 90%;
+            /* background-color: rgb(60, 148, 163); */
+            background: rgb(61,61,156);
+        background: linear-gradient(-65deg, rgba(61,61,156,0.8743872549019608) 22%, rgba(28, 29, 32, 0.94) 64%);
+            content: "";            
+            border-radius: 20%;
+            opacity: 60%;
+            transform: rotate(320deg);
+            z-index: -1;     
+            animation-name: redlight;
+            animation-duration: 3s;
+            animation-direction: alternate-reverse;
+            animation-iteration-count: infinite;      
+        } 
+       /*  @keyframes redlight{
+            0%{
+                box-shadow: 5px -5px 20px 0px red;
+            }
+            50%{
+                box-shadow: 5px -5px 30px 30px red;
+            }
+            100%{
+                box-shadow: 5px -5px 40px 15px red;
+            }
+        } */
+        @keyframes redlight{
+            0%{
+                box-shadow: 5px -5px 30px 0px white;
+            }
+            50%{
+                box-shadow: 5px -5px 30px 10px white;
+            }
+            175%{
+                box-shadow: 5px -5px 20px 0px red;
+            }
+            100%{
+                box-shadow: 5px -5px 20px 5px red;
+            }}
+        .container:hover  .container::before{
+            background-color: red;
+            transform: rotate(30deg);
+            transition: all 1s;
+        }
+         .container h2{
+            background: rgb(61,61,156);
+            background: linear-gradient(354deg, rgba(61,61,156,1) 29%, rgba(32,32,29,0.9444152661064426) 59%);
+            position: relative;
+            top: -40px;
+            -webkit-text-fill-color: transparent;
+            -webkit-background-clip: text; 
+            letter-spacing: -5.5px;
+            font-size: 3rem;
+            font-weight: lighter;
+            color: white;     
+            animation-name: h2reflejoblanco;
+            animation-duration: 1.5s;
+            animation-iteration-count: infinite;       
+        }
+        .h2container1{
+             
+            animation-delay: 0s;
+        }
+        .h2container2{
+            
+            animation-delay: .5s;
+            
+        }
+        .h2container3{
+            
+            animation-delay: 1s;
+        }
+        @keyframes h2reflejoblanco {
+            0%  {background: rgb(61,61,156);
+                background: linear-gradient(354deg, rgba(61,61,156,1) 29%, rgba(212, 212, 199, 0.944) 59%);
+                -webkit-text-fill-color: transparent;
+                -webkit-background-clip: text; 
+                text-transform: uppercase;
+                text-decoration: underline;
+
+            }
+            100%{
+                background: rgb(61,61,156);
+                background: linear-gradient(354deg, rgba(61,61,156,1) 29%, rgba(32,32,29,0.9444152661064426) 59%);
+                -webkit-text-fill-color: transparent;
+                -webkit-background-clip: text;
+                
+                
+            }
+            
+        }
+        .img-container{
+            width: 13rem;
+            height: 13rem;
+                   
+            /* background: rgb(150,173,170);
+            background: linear-gradient(218deg, rgba(150,173,170,1) 29%, rgba(32,32,29,0.9444152661064426) 64%); */
+            background-color: transparent;
+            overflow: -moz-hidden-unscrollable;
+            margin: auto;
+            
+            top: -40px;
+            position: relative;                
+            display: flex;
+            justify-content: center;            
+            border-radius: 40%;
+            /* transform: rotate(40deg); */
+            box-shadow: 0px 0px 30px 25px rgb(61, 61, 156);
+        }
+        
+        
+        .container img{
+            /* transform: rotate(-40deg); */
+            transition: all .5s;
+            position: relative;
+            width: 22rem;  
+            z-index: 5;          
+            height: auto;    
+                 
+        } 
+      
+
+        .container img:hover{
+            transform: scale(1.2);
+                                                      
+            transition: all 2s;
+            cursor: pointer;        
+        }
+        
+        .container p {
+            
+            top: -20px;
+            width: 100%;
+            font-size: 1.65rem;
+            color: white; 
+            margin: auto;
+            
+            line-height: 22px; 
+            display: flex;
+            flex-direction: column;
+            position: relative;
+            justify-content: space-evenly;
+            align-items: center;       
+               
+        }
+        .inner-msg{
+            letter-spacing: -1.9px;
+            color: black;
+            
+            font-size: 1.2rem;
+            
+                    
+            
+        }
+        .price{
+            letter-spacing: -2.5px;
+            color: white;
+            font-size: 2.5em;
+            margin: 0px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .container small{
+            font-size: .5em;
+            top: -5px;
+            position: relative;
+            text-decoration: underline;
+            margin-left: 2px;
+        }
+        .container a{        
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            
+            text-decoration: none;
+            font-size: 2.5em;
+            /* border: 3px solid rgb(132, 204, 245);  */           
+            width: 65%;
+            box-shadow: -2px 2px 10px 5px rgb(20, 20, 20),
+                        1.8px 1.8px 1.5px 1.5px rgb(179, 2, 2);
+            margin:auto;
+            letter-spacing: 3px;
+            text-shadow:1px 1px 1px  black,
+                        2px -3px 1px  black,
+                        3px -3px 1px  black,
+                        4px -3px 1px  black;
+            border-radius: 5px;            
+            color: white;
+            font-weight: bold;
+            height: 37px;
+            cursor: pointer;  
+            
+            background-color: red;                    
+        }
+        .container a:hover{
+            animation-iteration-count: infinite;
+            animation-name: brillo;
+            animation-direction: alternate-reverse;
+            animation-duration: .7s;  
+            animation-delay: .5s;
+        }
+
+        @keyframes brillo {
+            from{
+                opacity: 40%;
+            }
+            to{
+                opacity: 90%;
+            }
+        }         
+      
+    </style>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li>
+                <a href="">Products</a>
+                </li>
+            <li>
+                <a href="">How to buy</a>
+                </li>
+            <li>
+                <a href="">About us</a>
+                </li>
+        </ul>
+    </nav>
+    
+    <div class="container">
+            <div class="box">
+            <h2 class="h2container1" >Nike Duko </h2>
+            <div class="img-container">
+                <img src="/Imagenes/foto1.png" alt="">
+            </div>            
+            <p>Next gen shoes, <br>
+                 <span class="inner-msg">
+                    u know it, they are f <small>$%</small> cking awesome.
+                </span> 
+            </p>
+            <span class="price" >U$D 45.<small>99</small></span>
+            <a href="https://www.grid.com.ar/nike">BUY NOW</a>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="box">
+        <h2 class="h2container2" >Nike Stencil</h2>
+        <div class="img-container">
+            <img src="/Imagenes/foto2.png" alt="">
+        </div>   
+        
+        <p>Red dinamics Red alert, <br>
+            <span class="inner-msg">
+                Call your friends like now
+            </span>  
+        </p>
+        <span class="price" >U$D 20.<small>99</small></span>
+        <a href="https://www.grid.com.ar/nike">BUY NOW</a>
+    </div>
+
+    </div>
+    <div class="container">
+        <div class="box">
+        <h2 class="h2container3" >Nike Airborn</h2>
+        <div class="img-container">
+            <img src="/Imagenes/foto3.png" alt="">
+        </div>   
+        <p> Feeling like an sport guy? these are for u! <br>
+            <span class="inner-msg">
+               because we still love sports
+            </span>  
+        </p>
+        <span class="price" >U$D 85.<small>99</small></span>
+        <a href="https://www.grid.com.ar/nike">BUY NOW</a>
+    </div>
+    </div>
+    
+</body>
+</html>
+
